@@ -34,7 +34,8 @@ Single Page Application
 
 通过 指令 扩展了 HTML，通过 表达式 绑定数据到 HTML
 最大程度上解放了 DOM">
-<meta property="og:updated_time" content="2017-03-27T03:19:53.483Z">
+<meta property="og:image" content="http://yoursite.com/img/hello-world解析.png">
+<meta property="og:updated_time" content="2017-03-27T03:25:19.063Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AngularJS（一）">
 <meta name="twitter:description" content="AngularJS简介
@@ -48,6 +49,7 @@ Single Page Application
 
 通过 指令 扩展了 HTML，通过 表达式 绑定数据到 HTML
 最大程度上解放了 DOM">
+<meta name="twitter:image" content="http://yoursite.com/img/hello-world解析.png">
   
     <link rel="alternative" href="/atom.xml" title="xiaomin" type="application/atom+xml">
   
@@ -288,7 +290,268 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
-<h3 id="为什么使用Angular"><a href="#为什么使用Angular" class="headerlink" title="为什么使用Angular"></a>为什么使用Angular</h3>
+<h3 id="为什么使用Angular"><a href="#为什么使用Angular" class="headerlink" title="为什么使用Angular"></a>为什么使用Angular</h3><p>以前我们是这样的：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>传统页面操作数据操作方式<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"txt_value"</span> <span class="attr">type</span>=<span class="string">"number"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"btn_add"</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"增加"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">    (function(window, document) &#123;</div><div class="line">      var txt = document.querySelector('#txt_value');</div><div class="line">      var btn = document.querySelector('#btn_add');</div><div class="line">      btn.addEventListener('click', function(e) &#123;</div><div class="line">        var now = txt.value - 0;</div><div class="line">        now = now + 1;</div><div class="line">        txt.value = now;</div><div class="line">      &#125;);</div><div class="line">    &#125;)(window, document);</div><div class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>以后将会是这样的：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>使用AngularJS实现自增功能<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-app</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">ng-model</span>=<span class="string">"value"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">ng-click</span>=<span class="string">"value=value+1"</span> <span class="attr">value</span>=<span class="string">"增加"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"../bower_components/angular/angular.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>更少的代码，实现更强劲的功能，当然不仅仅是这些，这些只是皮毛<ul>
+<li>write less , do more</li>
+<li>jQuery 提高了你操作DOM的效率</li>
+<li>Angular 减少了DOM操作</li>
+<li>Angular 不推崇直接操作DOM</li>
+</ul>
+</li>
+<li>背后带来的价值才是大大地</li>
+<li>带领前端进入了 MV* 的时代<ul>
+<li>MVC</li>
+<li>MVVM</li>
+</ul>
+</li>
+<li>又是一场革命<ul>
+<li>革命的开头 2009 起</li>
+</ul>
+</li>
+</ul>
+<h3 id="项目案例"><a href="#项目案例" class="headerlink" title="项目案例"></a>项目案例</h3><ul>
+<li>TODOList</li>
+<li>豆瓣电影列表</li>
+<li>官网示例：PhoneCat</li>
+</ul>
+<h3 id="AngularJS-使用场景"><a href="#AngularJS-使用场景" class="headerlink" title="AngularJS 使用场景"></a>AngularJS 使用场景</h3><ul>
+<li>重型的后台管理系统<ul>
+<li>有很多增删改查</li>
+<li>繁杂的 DOM 操作处理的页面</li>
+</ul>
+</li>
+<li>单页面应用程序</li>
+<li>类似于 canvas、HTML5游戏、数据可视化应用<ul>
+<li>使用 ng 就没有意义了</li>
+</ul>
+</li>
+</ul>
+<h3 id="学习资源推荐"><a href="#学习资源推荐" class="headerlink" title="学习资源推荐"></a>学习资源推荐</h3><hr>
+<h2 id="Getting-started：起步"><a href="#Getting-started：起步" class="headerlink" title="Getting started：起步"></a>Getting started：起步</h2><ul>
+<li>搜索是什么</li>
+<li>看官网能干什么</li>
+<li>探索怎么用</li>
+</ul>
+<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><ul>
+<li>github<ul>
+<li><a href="https://github.com/angular/angular.js/releases" target="_blank" rel="external">https://github.com/angular/angular.js/releases</a></li>
+</ul>
+</li>
+<li>CDN<ul>
+<li><a href="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js" target="_blank" rel="external">https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js</a></li>
+</ul>
+</li>
+<li>bower<ul>
+<li>bower install angular#1.5.8</li>
+</ul>
+</li>
+<li>npm<ul>
+<li>npm install angular@1.5.8</li>
+</ul>
+</li>
+</ul>
+<h3 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h3><h3 id="代码解析"><a href="#代码解析" class="headerlink" title="代码解析"></a>代码解析</h3><ul>
+<li>当网页加载完毕，AngularJS 自动开始执行</li>
+<li>HTML 页面中 <code>ng-xxx</code> 的属性称之为指令（Directive）</li>
+<li><code>ng-app</code> 指令告诉 AngularJS ，<code>&lt;body&gt;</code> 元素是 AngularJS 应用程序管理的边界</li>
+<li><code>ng-init</code> 指令初始化 AngularJS 应用程序变量</li>
+<li><code>ng-model</code> 指令把文本框的 <code>value</code> 值绑定到变量 <code>name</code> 上</li>
+<li><code></code> 表达式就是把应用程序变量 <code>name</code> 绑定到某个元素的 <code>innerHTML</code></li>
+</ul>
+<p>解析过程如下图：</p>
+<p><img src="img/hello-world解析.png" alt="执行流程"></p>
+<h3 id="AngularJS-指令"><a href="#AngularJS-指令" class="headerlink" title="AngularJS 指令"></a>AngularJS 指令</h3><p>AngularJS 指令是以 <code>ng-</code> 作为前缀的 HTML 属性，<br>AngularJS 通过内置的指令来为应用添加功能，<br>AngularJS 同时允许你自定义指令，从而构建更加超动感的 HTML。</p>
+<p>HTML5 允许扩展的（自制的）属性，以 <code>data-</code> 开头。<br>AngularJS 属性以 ng- 开头，但是也可以使用 <code>data-ng-</code> 来让网页对 HTML5 有效。</p>
+<ul>
+<li>ng-app</li>
+<li>ng-init</li>
+<li>ng-model</li>
+<li>ng-repeat</li>
+</ul>
+<h3 id="AngularJS-表达式"><a href="#AngularJS-表达式" class="headerlink" title="AngularJS 表达式"></a>AngularJS 表达式</h3><ul>
+<li>AngularJS 表达式写在双大括号内：<code></code></li>
+<li>AngularJS 表达式把数据绑定到 HTML，与 <code>ng-bind</code> 指令基本一致</li>
+<li>AngularJS 将在表达式书写的位置”输出”数据<ul>
+<li>数字</li>
+<li>字符串</li>
+<li>对象</li>
+<li>数组</li>
+</ul>
+</li>
+<li>AngularJS 表达式 很像 JavaScript 表达式：它们可以包含字符串、操作符和变量<ul>
+<li>与 JavaScript 表达式不同，AngularJS 表达式可以写在 HTML 中</li>
+<li>与 JavaScript 表达式不同，AngularJS 表达式不支持条件判断，循环及异常</li>
+<li>与 JavaScript 表达式不同，AngularJS 表达式支持过滤器</li>
+</ul>
+</li>
+</ul>
+<h3 id="使用-AngularJS-编写计算器应用"><a href="#使用-AngularJS-编写计算器应用" class="headerlink" title="使用 AngularJS 编写计算器应用"></a>使用 AngularJS 编写计算器应用</h3><h3 id="使用总结"><a href="#使用总结" class="headerlink" title="使用总结"></a>使用总结</h3><ul>
+<li>AngularJS 最大程度上减少了页面上的 DOM 操作</li>
+<li>让开发人员更专注于业务操作</li>
+<li>通过简洁的指令结合页面结构与逻辑数据</li>
+<li>通过自定义指令实现组件化编程</li>
+<li>代码结构更合理</li>
+<li>维护成本更低</li>
+<li>AngularJS 解放了传统 JavaScript 中频繁的 DOM 操作</li>
+</ul>
+<h3 id="查看官方文档"><a href="#查看官方文档" class="headerlink" title="查看官方文档"></a>查看官方文档</h3><hr>
+<h3 id="模块化：Module"><a href="#模块化：Module" class="headerlink" title="模块化：Module"></a>模块化：Module</h3><p>AngularJS 很重要的一个特性就是实现模块化编程，我们可以通过以下方式创建一个模块，<br>对页面进行功能业务上的划分。</p>
+<p>定义一个模块：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 注意：必须指定第二个参数，否则变成获取已定义的模块</span></div><div class="line"><span class="keyword">var</span> demoApp = angular.module(<span class="string">'DemoApp'</span>, [])</div></pre></td></tr></table></figure>
+<p>获取已有模块：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> demoApp = angular.module(<span class="string">'DemoApp'</span>)</div></pre></td></tr></table></figure>
+<p>定义依赖别的模块的模块：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> demoApp = angular.module(<span class="string">'DemoApp'</span>, [<span class="string">'Module1'</span>, <span class="string">'Module2'</span>])</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="MV"><a href="#MV" class="headerlink" title="MV*"></a>MV*</h3><p><a href="http://www.ruanyifeng.com/blog/2007/11/mvc.html" target="_blank" rel="external">阮一峰 - 谈谈MVC模式</a></p>
+<p><a href="http://www.ruanyifeng.com/blog/2015/02/mvcmvp_mvvm.html" target="_blank" rel="external">阮一峰 - MVC，MVP 和 MVVM 的图示</a></p>
+<h3 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h3><ul>
+<li>职责单一</li>
+<li>MVC 是一种应用程序的开发思想，不是设计模式</li>
+<li>主要目的是为了解决应用程序展示结构，业务逻辑之间的紧耦合关系</li>
+<li>使应用程序的组成分为三个部件，每个部件都有自己明确的职责，相互之间没有依赖</li>
+</ul>
+<h4 id="MVC-组成"><a href="#MVC-组成" class="headerlink" title="MVC 组成"></a>MVC 组成</h4><ul>
+<li>Model（模型）：处理数据和业务逻辑</li>
+<li>View（视图）：以友好的方式向用户展示数据</li>
+<li>Controller（控制器）：组织调度响应的处理模型</li>
+</ul>
+<h3 id="视图交互：MVVM"><a href="#视图交互：MVVM" class="headerlink" title="视图交互：MVVM"></a>视图交互：MVVM</h3><ul>
+<li>Model</li>
+<li>View</li>
+<li>ViewModel</li>
+<li>Controller</li>
+</ul>
+<h3 id="MVC-在代码中的体现：用户注册"><a href="#MVC-在代码中的体现：用户注册" class="headerlink" title="MVC 在代码中的体现：用户注册"></a>MVC 在代码中的体现：用户注册</h3><h3 id="在-AngularJS-中使用-MVC：用户注册"><a href="#在-AngularJS-中使用-MVC：用户注册" class="headerlink" title="在 AngularJS 中使用 MVC：用户注册"></a>在 AngularJS 中使用 MVC：用户注册</h3><h3 id="体会-MVC-方式构建应用的优势"><a href="#体会-MVC-方式构建应用的优势" class="headerlink" title="体会 MVC 方式构建应用的优势"></a>体会 MVC 方式构建应用的优势</h3><hr>
+<h3 id="控制器：Controller"><a href="#控制器：Controller" class="headerlink" title="控制器：Controller"></a>控制器：Controller</h3><ul>
+<li>控制器的三种主要职责<ul>
+<li>为应用中的模型设置初始状态</li>
+<li>通过 $scope 对象把数据模型或者函数行为暴露给视图</li>
+<li>监视模型的变化，做出相应的动作（$watch）<ul>
+<li>监视用户输入的用户名，检测是否被占用</li>
+<li>监视购物车的内容变化，计算最新结果，只能监视当前 $scope 上的成员</li>
+</ul>
+</li>
+<li>公共的抽象</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">angular.module(<span class="string">'DemoApp'</span>, [])</div><div class="line">  .controller(<span class="string">'DemoController'</span>, [<span class="string">'$scope'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope</span>) </span>&#123;</div><div class="line">    <span class="comment">// 在这里通过操作 $scope 改变 View 和 ViewModel</span></div><div class="line">  &#125;])</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h3><ul>
+<li><a href="https://angularjs.org/" target="_blank" rel="external">https://angularjs.org/</a></li>
+<li><a href="http://angular.io/" target="_blank" rel="external">http://angular.io/</a></li>
+<li><a href="http://www.runoob.com/angularjs/angularjs-tutorial.html" target="_blank" rel="external">http://www.runoob.com/angularjs/angularjs-tutorial.html</a></li>
+<li><a href="http://www.apjs.net/" target="_blank" rel="external">http://www.apjs.net/</a></li>
+<li><a href="http://angularjs.cn/" target="_blank" rel="external">http://angularjs.cn/</a></li>
+<li><a href="https://github.com/zensh/AngularjsTutorial_cn" target="_blank" rel="external">https://github.com/zensh/AngularjsTutorial_cn</a></li>
+<li><a href="https://item.jd.com/11522200.html" target="_blank" rel="external">https://item.jd.com/11522200.html</a></li>
+<li><a href="https://item.jd.com/11845736.html" target="_blank" rel="external">https://item.jd.com/11845736.html</a></li>
+</ul>
+<h1 id="bower"><a href="#bower" class="headerlink" title="bower"></a>bower</h1><p>bower 是一个适用于Web端第三方包的一个自动化解决方案。</p>
+<ul>
+<li>安装包<ul>
+<li>自动安装依赖项</li>
+</ul>
+</li>
+<li>卸载包</li>
+<li>更新包</li>
+<li>查找包</li>
+<li>保存依赖项</li>
+</ul>
+<h3 id="bower-的安装"><a href="#bower-的安装" class="headerlink" title="bower 的安装"></a>bower 的安装</h3><p><a href="https://bower.io/" target="_blank" rel="external">https://bower.io/</a></p>
+<ul>
+<li>node 环境<ul>
+<li><code>node -v</code></li>
+</ul>
+</li>
+<li>npm 包管理工具<ul>
+<li>基于 Node 开发的一个包管理工具</li>
+<li>npm 在安装 node 的时候已经被自动安装上了</li>
+<li><code>npm -v</code></li>
+</ul>
+</li>
+<li>git 环境<ul>
+<li><code>git --version</code></li>
+</ul>
+</li>
+<li><code>npm install --global bower</code><ul>
+<li>在操作系统全局安装一个命令行软件（CLI）</li>
+<li>Command Line Interface</li>
+<li>执行上面的命令的时候在命令行的任意目录都可以直接执行</li>
+<li>安装结束之后，通过输入 <code>bower --version</code> 查看是否安装成功</li>
+<li>对于一般的命令行工具，都可以通过 <code>工具名 -V|--version</code> 查看该工具的版本号</li>
+<li>或者 <code>工具名 --help|-h</code> 可以查看该工具的使用帮助</li>
+</ul>
+</li>
+</ul>
+<h3 id="bower-基本使用"><a href="#bower-基本使用" class="headerlink" title="bower 基本使用"></a>bower 基本使用</h3><ul>
+<li><p><code>bower install 包名</code></p>
+<ul>
+<li>在哪个项目下安装包，就切换到哪个项目根路径</li>
+<li>当安装成功的时候，bower 默认把包安装到项目根路径下的 bower_components 目录中</li>
+<li>bower 在安装包的时候还会自动安装该包的依赖项</li>
+</ul>
+</li>
+<li><p><code>bower install 包名#版本号</code></p>
+</li>
+<li><p><code>bower.json</code> 文件</p>
+<ul>
+<li>项目使用 bower 的说明文件，可以使用 <code>bower init</code> 命令以向导的形式生成</li>
+<li>该文件可以用来保存一些项目名称、作者、依赖项等信息</li>
+<li>我们在往 github 上传项目的时候，就不需要把 bower 安装的包也上传上去了，节省时间</li>
+<li>别人从 远程仓库拿到我们的项目的时候，直接执行 <code>bower install</code> 命令即可安装项目的依赖项</li>
+</ul>
+</li>
+<li><p><code>bower install 包名 --save</code> 将安装的包添加到 bower.json 文件的 dependencies 依赖项中</p>
+<ul>
+<li>每个项目如果使用 bower，最好都初始化一个 bower.json 文件</li>
+<li>同时在安装这些第三方包的时候都加上 –save 参数，保存依赖项</li>
+</ul>
+</li>
+<li><p><code>bower install</code></p>
+<ul>
+<li>该命令执行后，bower 会自动查找当前项目下的 bower.json 文件，找到里面的 dependencies 依赖项数组</li>
+<li>然后依次下载每一个依赖项到 bower_components 目录中</li>
+</ul>
+</li>
+<li><p><code>bower install 包名 --offline</code> 离线下载</p>
+<ul>
+<li>bower 对于下载过的包会缓存到计算机中</li>
+<li>使用 –offline 参数就可以实现离线下载</li>
+</ul>
+</li>
+<li><p><code>bower uninstall 包名</code></p>
+</li>
+<li><p><code>bower uninstall 包名 --save</code></p>
+<ul>
+<li>卸载包的时候同时把 bower.json 文件中的依赖项删除</li>
+</ul>
+</li>
+<li><p><code>.bowerrc</code> 配置文件</p>
+<ul>
+<li>该文件必须放到项目根路径下（也就是执行bower命令所处的目录）</li>
+<li>该文件可以用来配置一些 bower 的默认行为</li>
+<li>例如可以修改安装包的默认路径，示例如下：</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"directory"</span>: <span class="string">"lib"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>关于 bower 的其它具体使用方式，可以参照官方文档进行学习查看。</p>
+<h2 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h2><ol>
+<li>能概述 AngularJS 是什么</li>
+<li>能概述什么是 SPA 应用程序以及掌握锚点在 SPA 应用程序中的使用</li>
+<li>能掌握 bower 包管理工具的基本使用</li>
+<li>能解释一个基本的 ng 应用程序执行流程（见hello-world代码解析）</li>
+<li>能掌握 AngularJS 中的基本的指令和表达式的使用</li>
+<li>能掌握 AngularJS 中基本的模块使用（创建模块，依赖模块，获取模块）</li>
+<li>能使用 AngularJS 完成模拟用户注册功能</li>
+</ol>
+
       
 
       
