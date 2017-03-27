@@ -8,13 +8,49 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>HEXO之搭建个人博客 | xiaomin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="5. 使用 Hexo 搭建自己的个人静态博客Hexo
+
+必须安装 Node 环境
+通过在终端任意目录输入 node -v 查看是否有输入node的版本
+
+
+在终端的任意目录输入 npm install -g hexo-cli 然后回车执行等待安装成功
+通过输入 hexo --version 如果看到输入一大堆的版本号就说明安装成功了
+Hexo 是一个命令行应用程序
+
+
+接下来通过输入 hexp i">
+<meta property="og:type" content="article">
 <meta property="og:title" content="HEXO之搭建个人博客">
 <meta property="og:url" content="http://yoursite.com/2014/01/01/HEXO之搭建个人博客/index.html">
 <meta property="og:site_name" content="xiaomin">
-<meta property="og:updated_time" content="2017-03-25T14:11:26.934Z">
+<meta property="og:description" content="5. 使用 Hexo 搭建自己的个人静态博客Hexo
+
+必须安装 Node 环境
+通过在终端任意目录输入 node -v 查看是否有输入node的版本
+
+
+在终端的任意目录输入 npm install -g hexo-cli 然后回车执行等待安装成功
+通过输入 hexo --version 如果看到输入一大堆的版本号就说明安装成功了
+Hexo 是一个命令行应用程序
+
+
+接下来通过输入 hexp i">
+<meta property="og:updated_time" content="2017-03-27T13:00:37.160Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HEXO之搭建个人博客">
+<meta name="twitter:description" content="5. 使用 Hexo 搭建自己的个人静态博客Hexo
+
+必须安装 Node 环境
+通过在终端任意目录输入 node -v 查看是否有输入node的版本
+
+
+在终端的任意目录输入 npm install -g hexo-cli 然后回车执行等待安装成功
+通过输入 hexo --version 如果看到输入一大堆的版本号就说明安装成功了
+Hexo 是一个命令行应用程序
+
+
+接下来通过输入 hexp i">
   
     <link rel="alternative" href="/atom.xml" title="xiaomin" type="application/atom+xml">
   
@@ -176,7 +212,44 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="5-使用-Hexo-搭建自己的个人静态博客"><a href="#5-使用-Hexo-搭建自己的个人静态博客" class="headerlink" title="5. 使用 Hexo 搭建自己的个人静态博客"></a>5. 使用 Hexo 搭建自己的个人静态博客</h2><p><a href="https://hexo.io/zh-cn/" target="_blank" rel="external">Hexo</a></p>
+<ul>
+<li>必须安装 Node 环境<ul>
+<li>通过在终端任意目录输入 <code>node -v</code> 查看是否有输入node的版本</li>
+</ul>
+</li>
+<li>在终端的任意目录输入 <code>npm install -g hexo-cli</code> 然后回车执行等待安装成功<ul>
+<li>通过输入 <code>hexo --version</code> 如果看到输入一大堆的版本号就说明安装成功了</li>
+<li>Hexo 是一个命令行应用程序</li>
+</ul>
+</li>
+<li>接下来通过输入 <code>hexp init 博客项目存储目录</code><ul>
+<li>Hexo 会在你执行该命令的目录下生成一个博客项目</li>
+<li>初始化博客项目的过程需要联网</li>
+</ul>
+</li>
+<li>接下来通过终端进入刚才创建的博客项目目录，然后在该目录下输入 <code>npm install</code> 回车等待执行结束</li>
+<li><p>接下来输入 <code>hexo server</code> 回车执行，它会在你的本地启动一个服务器，然后就可以访问你的博客项目</p>
+</li>
+<li><p>进入博客项目，输入 <code>hexo new 文章名称</code> 创建博客</p>
+<ul>
+<li>该命令会自动在 source/_posts/ 目录下生成一个 文章名称.md 文件</li>
+</ul>
+</li>
+<li><p>生成静态文件：<code>hexo generate</code></p>
+<ul>
+<li>该命令会自动在项目的根目录下的 public 目录下降静态文件放进去吧</li>
+</ul>
+</li>
+<li><p>快速部署</p>
+<ul>
+<li>修改配置文件</li>
+<li>在项目根路径下执行 <code>npm install hexo-deployer-git --save</code> 该命令</li>
+<li>接下来就可以直接输入 <code>hexo deploy --generate</code> 自动发布到 github 上</li>
+</ul>
+</li>
+</ul>
+
       
 
       
@@ -448,10 +521,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AngularJS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
              
@@ -460,7 +529,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -472,7 +541,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">AngularJS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
